@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be hidden initially.
+  </div>
+
+  <script>
+    // Incorrect attempt to hide the element
+    document.getElementById('myDiv').style.display = "hidden"; //This line is executed before the element is fully loaded, causing it to not work
+    document.getElementById('myDiv').style.visibility = "hidden";
+  </script>
+</body>
+</html>
